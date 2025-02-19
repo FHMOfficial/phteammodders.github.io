@@ -11,7 +11,7 @@ function generateKey() {
 }
 
 function copyText() {
-    var text = document.getElementById("text").innerText;
+    var text = document.getElementById("key").innerText;
     navigator.clipboard.writeText(text).then(() => {
         alert("Text copied: " + text);
     });
