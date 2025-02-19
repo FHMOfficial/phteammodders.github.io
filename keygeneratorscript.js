@@ -9,3 +9,12 @@ function generateKey() {
     
     document.getElementById("key").textContent = key;
 }
+
+<script>
+function copyText() {
+    var text = document.getElementById("text").innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Text copied: " + text);
+    });
+}
+</script>
