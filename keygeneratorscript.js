@@ -8,6 +8,8 @@ function generateKey() {
     }
     
     document.getElementById("key").textContent = key;
+
+    window.location.href = "keygenerator://login?key=" + key;
 }
 
 function copyText() {
