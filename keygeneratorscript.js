@@ -9,7 +9,11 @@ function generateKey() {
     
     document.getElementById("key").textContent = key;
 
-    window.location.href = "keygenerator://login?key=" + key;
+    var intent = document.createElement("a");
+    intent.href = "intent://savekey/" + key + "#Intent;scheme=keygenerator;package=com.fhm.modmenu;end;";
+
+    document.body.appendChild(intent);
+    intent.click();
 }
 
 function copyText() {
