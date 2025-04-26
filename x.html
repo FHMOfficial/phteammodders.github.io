@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Secure Info</title>
+  <script>
+    function reveal() {
+      var key = prompt("Enter your secret key:");
+      if (key === "mySecret123") {
+        document.body.innerHTML = "<h3>Email: myemail@example.com</h3><h3>Password: mySecretPassword123</h3>";
+      } else {
+        document.body.innerHTML = ""; // stays blank for wrong key
+      }
+    }
+    window.onload = function() {
+      reveal();
+    };
+  </script>
+</head>
+<body>
+</body>
+</html>
